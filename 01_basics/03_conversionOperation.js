@@ -25,8 +25,51 @@ let boolanIsLoggedIn=Boolean(LoggedIn)
 let someNumber=45
 
 let strigNumber= String(someNumber)
-console.log(strigNumber);
-console.log(typeof strigNumber);
+//console.log(strigNumber);
+//console.log(typeof strigNumber);
+
+
+// ***************************operations***************************************
+
+
+let value=3
+let negvalue=-value
+//console.log(negvalue);
+
+//console.log(2+2);
+//console.log(2-2);
+//console.log(2*2);
+//console.log(2**3);  // 2 to the power 3
+//console.log(2%3);
+
+let str1="bhushan"
+let str2=" vaibhav"
+
+let str3=str1+str2
+console.log(str3);
+
+// console.log("1"+2); //O/P=>12
+// console.log(1+"2"); //O/P=>12
+// console.log("1"+2+2); // O/p=>122  // jevha first string aaste tevha saglyanna syring consider kela jata 
+//                                    // aani jevha string value last la aaste tevhha tichya aadhich conversion hota aani mg string attach keli jaate 
+// console.log(1+2+"2"); //O/p=>32
+
+//console.log((2+3)*5%4);
+console.log(+true);
+console.log(Number(+""));
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
