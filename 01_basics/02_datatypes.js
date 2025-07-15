@@ -17,8 +17,8 @@ let isLoggedIn=false
 //bigint
 //string=>""
 // boolean=> true or false
-// null=>standalone value
-// undefined
+// null=>standalone value    
+// undefined    
 //symbol=> unique
 
 // objects
