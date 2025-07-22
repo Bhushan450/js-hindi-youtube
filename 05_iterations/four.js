@@ -24,7 +24,7 @@ map.set('UK',"united kingdom")  // ''= keys , ""= value of keys
 map.set('FR',"france")
 
 for (const key in map) {
-     console.log(key);    // maps cannot  be iterable by for-in loop
+     //console.log(key);    // maps cannot  be iterable by for-in loop
     
 }
 
