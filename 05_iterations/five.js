@@ -7,7 +7,7 @@ language.forEach( function (item){
 }
   )    
 
-language.forEach((value)=>{   // by using array function 
+language.forEach((value)=>{   // by using arrow function 
    // console.log(value);
 }
   )
