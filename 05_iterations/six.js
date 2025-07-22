@@ -1,11 +1,12 @@
-// const coding=["ruby",'py',"cpp","rust"]
+const coding=["ruby",'py',"cpp","rust"]
 
-// const value=coding.forEach((item)=>{
-//     console.log(item);
+const value=coding.forEach((item)=>{
+    console.log(item);               
+   // return item                // for-each loop kontich value return nahi karat
     
-// })
+})
 
-// console.log(value);
+console.log(value);
 
 const myNums=[1,2,3,4,5,6,7,8,9,10]
 
@@ -17,7 +18,7 @@ const myNums=[1,2,3,4,5,6,7,8,9,10]
 
 
 
-// const num=[]
+// const num=[] 
 
 // myNums.forEach( (nums)=>{
 //     if (nums>4) {
@@ -47,5 +48,6 @@ const books = [
     return bk.publish>=1995 && bk.genre==='History'
    })
 
-  console.log(userbooks);
+//   console.log(userbooks);
   
+//
