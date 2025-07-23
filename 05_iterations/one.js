@@ -14,7 +14,7 @@ for (let i = 0; i <= 10; i++) {
 for (let i = 1; i <= 10; i++) {
     // console.log(`outer loop values: ${i}`);
     for (let j = 1; j <= 10; j++) {
-       // console.log(`inner loop values : ${j} and inner loop ${i}`);
+       // console.log(`inner loop values : ${j} and outer loop ${i}`);
         // console.log(i+ '*' +j+ '=' + i*j);
         
     }  
