@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Code | DOM</title>
+</head>
+<body style="background-color: #212121;color: #fff;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+
+</body>
+<script>
+        function addLANG(langNAme){
+           const li= document.createElement('li')
+           li.innerHTML=(`${langNAme}`)
+           document.querySelector('.language').appendChild(li)
+
+        }
+        addLANG("python")
+        addLANG("typescript")
+        addLANG("java")
+
+        function addOptimizeLang(langName){
+            const li= document.createElement('li')
+            li.appendChild(document.createTextNode(langName))
+            document.querySelector('.language').appendChild(li)
+        }
+
+        addOptimizeLang("golang")
+
+  
+        // Edit
+
+       const secondLang= document.querySelector('li:nth-child(2)')
+      // secondLang.innerHTML="mojito"     // this  is not a optimize way to remove or edit the document
+
+      const newli=document.createElement('li')
+       newli.textContent="mojito"
+
+      secondLang.replaceWith(newli)
+
+    //   Edit   // edit the first element 
+
+    const firsttLang=document.querySelector('li:first-child')
+    firsttLang.outerHTML='<li> java</li>'
+
+    // remove 
+
+    const lastLang=document.querySelector('li:last-child')
+    lastLang.remove()  // it removes the last element 
+
+</script>
+</html>
