@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=h1, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>chai aur javascript</h1>
+    <button id="start"> start</button>
+    <button id="stop"> stop</button>
+</body>
+<script>
+    let stopThis;
+    const name=function(str){
+        console.log(str,"bhushan");   
+    }
+
+    // const intervalId=setInterval( name,1000,"hi")   // setInterval => it do the work repetatively/contineously in the given interval 
+    //                                // it cana takes the 3 parameters like 'reference of any function' ,'timeout',and a 'string
+                                   
+    //  clearInterval(intervalId)        // it stops the work.
+     
+     document.querySelector('#start').addEventListener('click',function(){
+       stopThis=setInterval( name,1000,"hi")
+     })
+
+     document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(stopThis)
+        console.log("stoped clicked");                            // we have to declared setInterval's ID (stopThis) into the global scope 
+        
+     })
+    
+</script>
+</html>
