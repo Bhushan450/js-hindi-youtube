@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing image</h2>
+    <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="" ></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+    </div>
+
+</body>
+<script>
+    // document.getElementById('owl').onclick=function(){   // this is old technique
+    //     alert('owl clicked ')
+    // }
+
+    // attachEvent
+    // jQuery-on
+
+    // type, timestamp, defaultPrevented
+    // target, toElement, srcElement, currentTarget,
+    // clientX, clientY, screenX, screenY
+    // altkey, ctrlkey, shiftkey, keyCode
+
+    //********** events are written into ('')=> stings  *****
+
+    // document.getElementById('owl').addEventListener('click',function(){},false)  // by default '3rd value false aaste mhanun aaapan 3rd value det nahit '
+    
+    document.getElementById('owl').addEventListener('click',function(e){
+        //console.log("e");   => gives the list of events
+    },false )  // false is by-default , no need to write it 
+
+
+
+     // ***** Event Propogation***** or**** Bubbling up*****
+
+       // large events je aastat te aatlya evnts madun select hotat (or) downside up 
+    // document.getElementById('images').addEventListener('click',function(e){
+    //     console.log("clicked inside the ul");   
+    // },false )  // false is by-default , no need to write it 
+        
+    // document.getElementById('owl').addEventListener('click',function(e){
+    //     console.log("clicked on owl");  
+    //    // e.stopPropagation()   // stopPropogation ne event bubble uop houn larger or outisde event la jat nahi (fakt 'clicked on owl print honar')
+    // },false )  
+
+    // // ******** Capturing ******
+
+    //    // Upside-Down 
+    //    // aadhi 'clicked inside the ul' then 'clicked on owl' print honar 
+
+    // document.getElementById('images').addEventListener('click',function(e){
+    // //    console.log("clicked inside the ul");   
+    // },true )  // false is by-default , no need to write it 
+        
+    // document.getElementById('owl').addEventListener('click',function(e){
+    // //    console.log("clicked on owl");  
+    // },true )  
+
+
+    // document.getElementById('google').addEventListener('click',function(e){
+    //  e.preventDefault();
+    //  e.stopPropagation();
+
+    //  console.log('clicked on google');
+
+    // },false)
+
+ document.querySelector('#images').addEventListener('click',function(e){
+   console.log(e.target.tagName);                   // .target=> gives the target from which the event is occurs 
+    console.log(e.target.tagName);               //.tagNAme=> it gives thr tsgs of a image
+    if (e.target.tagName==='IMG') {
+        console.log(e.target.id);
+        
+        let removePic=e.target.parentNode       // .parentNode=> gives the parent node 
+        removePic.remove()          // removes the targeted pics
+    }                  
+  //     (OR)
+  removePic.parentNode.removeChild(removePic)  // also removes pics
+    
+ })
+    
+
+    
+
+</script>
+</html>
