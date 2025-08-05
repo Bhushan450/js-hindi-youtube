@@ -27,5 +27,6 @@ chai.addCourse()
 const masalaChai = new User("masalaChai")
 
  masalaChai.logMe()
+ //masalaChai.addCourse()  // masala chai does not have access of addCourse function 
 
 console.log(chai instanceof User);
